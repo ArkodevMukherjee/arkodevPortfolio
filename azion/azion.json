@@ -1,0 +1,42 @@
+{
+  "name": "arkodevPortfolio",
+  "bucket": "",
+  "preset": "javascript",
+  "env": "production",
+  "prefix": "20241130085538",
+  "not-first-run": true,
+  "function": {
+    "id": 33047,
+    "name": "__DEFAULT__",
+    "file": ".edge/worker.js",
+    "args": "azion/args.json",
+    "instance-id": 31784,
+    "instance-name": "__DEFAULT__",
+    "cache-id": 191403
+  },
+  "application": {
+    "id": 1732951189,
+    "name": "__DEFAULT__"
+  },
+  "domain": {
+    "id": 1732956901,
+    "name": "arkodevPortfolio",
+    "domain_name": "j0h9604d41.map.azionedge.net",
+    "url": "https://j0h9604d41.map.azionedge.net"
+  },
+  "rt-purge": {
+    "purge_on_publish": true
+  },
+  "origin": [],
+  "rules-engine": {
+    "created": false,
+    "rules": [
+      {
+        "id": 328914,
+        "name": "Execute Edge Function",
+        "phase": "request"
+      }
+    ]
+  },
+  "cache-settings": []
+}
