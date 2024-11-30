@@ -440,9 +440,9 @@ button[type="submit"]:hover {
 
   
   <!-- Footer -->
-  <footer class="footr">
+  <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+      <p>&copy; 2024. All Rights Reserved.</p>
       <div class="social-links">
         <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram">Instagram</a>
         <a href="https://www.facebook.com/" target="_blank" class="social-icon facebook">Facebook</a>
