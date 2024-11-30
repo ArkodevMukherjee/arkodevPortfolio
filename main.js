@@ -440,7 +440,7 @@ button[type="submit"]:hover {
 
   
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footr">
     <div class="container">
       <p>&copy; 2024 Your Name. All Rights Reserved.</p>
       <div class="social-links">
