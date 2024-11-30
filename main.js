@@ -20,27 +20,17 @@ function main(event) {
   }
    
   return new Response(`
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of a Computer Science Engineer" />
-  <title>Arkodev Mukherjee | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Portfolio</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
     /* General Styles */
-    body {
-      font-family: "Arial", sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background: #f8f9fa;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
 
     * {
       font-family: "Geist", sans-serif;
@@ -49,14 +39,23 @@ function main(event) {
       font-style: normal;
     }
 
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f8f9fa;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
     }
 
-    h1,
-    h2 {
+    h1, h2 {
       text-align: center;
       color: #333;
     }
@@ -71,7 +70,6 @@ function main(event) {
       top: 0;
       width: 100%;
       background: #005f73;
-      /* Navbar background color */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 1000;
       padding: 10px 0;
@@ -83,7 +81,6 @@ function main(event) {
     .logo {
       font-size: 1.5rem;
       color: white;
-      /* Adjusted to contrast with navbar background */
       font-weight: bold;
       text-decoration: none;
     }
@@ -97,7 +94,6 @@ function main(event) {
     .nav-links a {
       text-decoration: none;
       color: white;
-      /* Adjusted for better contrast */
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -117,7 +113,7 @@ function main(event) {
 
     /* Hero Section */
     .hero {
-      background: url("https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg?rev=025a044aa9394515a261e9c6242045cb") no-repeat center center/cover;
+      background: url('https://www.crowe.com/-/media/crowe/llp/sc10-media/insights/articles/2023/content-2000x1125/contentmktmt2300002bfy23-markets-technology-awareness--whats-next-for-tech--thought-leadershipas3639.jpg?rev=025a044aa9394515a261e9c6242045cb') no-repeat center center/cover;
       color: white;
       padding: 150px 0;
       text-align: center;
@@ -125,17 +121,13 @@ function main(event) {
     }
 
     .hero::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,
-          95,
-          115,
-          0.7);
-      /* Adds a dark overlay to enhance text readability */
+      background: rgba(0, 95, 115, 0.7);
       z-index: 1;
     }
 
@@ -144,7 +136,6 @@ function main(event) {
     .hero .btn {
       position: relative;
       z-index: 2;
-      /* Ensure text is above the overlay */
     }
 
     .hero h1 {
@@ -195,6 +186,7 @@ function main(event) {
       margin-top: 20px;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 15px;
     }
 
@@ -206,100 +198,111 @@ function main(event) {
       font-size: 1rem;
       color: white;
       background: #0077b6;
-      /* Default background color */
       transition: background 0.3s, transform 0.3s;
     }
 
     .social-icon:hover {
       transform: translateY(-5px);
-    }
-
-    /* Individual Colors for Each Platform */
-    .instagram {
-      background: #e4405f;
-      /* Instagram pink */
-    }
-
-    .facebook {
-      background: #1877f2;
-      /* Facebook blue */
-    }
-
-    .linkedin {
-      background: #0a66c2;
-      /* LinkedIn blue */
-    }
-
-    .twitter {
-      background: #1da1f2;
-      /* Twitter blue */
-    }
-
-    .social-icon:hover {
       filter: brightness(1.2);
     }
 
-    /* Projects Section */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    /* Individual Colors */
+    .instagram {
+      background: #E4405F;
     }
 
-    .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .facebook {
+      background: #1877F2;
     }
 
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    .linkedin {
+      background: #0A66C2;
     }
 
-    .project-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+    .twitter {
+      background: #1DA1F2;
     }
 
-    .project-card p {
-      margin-bottom: 20px;
-    }
+    /* Contact Section Styling */
+#contact {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
 
-    /* Contact Form */
-    input,
-    textarea {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
+#contact h2 {
+  text-align: center;
+  color: #333;
+}
 
-    button {
-      background: #0077b6;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+#contact p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
 
-    button:hover {
-      background: #005f73;
-    }
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #005f73;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  background: #ffdd57;
+  color: #005f73;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #ffc300;
+}
+
+/* Responsive Design for Contact Form */
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
 
     /* Footer Styles */
     .footer {
       background: #005f73;
-      /* Matches navbar background for consistency */
       color: white;
       text-align: center;
       padding: 20px 0;
@@ -316,40 +319,6 @@ function main(event) {
       display: flex;
       justify-content: center;
       gap: 15px;
-    }
-
-    .footer .social-icon {
-      display: inline-block;
-      padding: 10px 15px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: white;
-      background: #0077b6;
-      /* Default background color */
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .footer .social-icon:hover {
-      transform: translateY(-5px);
-      filter: brightness(1.2);
-    }
-
-    /* Individual Colors for Each Platform */
-    .footer .instagram {
-      background: #e4405f;
-    }
-
-    .footer .facebook {
-      background: #1877f2;
-    }
-
-    .footer .linkedin {
-      background: #0a66c2;
-    }
-
-    .footer .twitter {
-      background: #1da1f2;
     }
 
     /* Responsive Design */
@@ -389,49 +358,45 @@ function main(event) {
       .project-grid {
         grid-template-columns: 1fr;
       }
+
+      .social-icon {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
     }
   </style>
 </head>
-
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="container">
-      <a href="#hero" class="logo">Arkodev Mukherjee</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle">
-        ☰
-      </button>
-    </div>
+    <a href="#" class="logo">My Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
   </nav>
 
   <!-- Hero Section -->
-  <header id="hero" class="hero">
-    <div class="container">
-      <h1>Arkodev Mukherjee</h1>
-      <p>Computer Science Engineer | Web Developer | Innovator</p>
-      <a href="#contact" class="btn primary-btn">Contact Me</a>
-    </div>
-  </header>
-  "
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Your journey to the digital world starts here</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
+
   <!-- About Section -->
-  <section id="about" class=section">
+  <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
       <p>
-        I am a computer science engineer passionate about building web applications and solving complex problems using
-        technology. I specialize in web development, algorithms, and scalable system design.
+        I am a computer science engineer passionate about building web applications and solving complex problems using technology. I specialize in web development, algorithms, and scalable system design.
       </p>
       <ul class="skills">
         <li><strong>Languages:</strong> Python, JavaScript, C++</li>
         <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
         <li><strong>Tools:</strong> Git, Docker, Linux</li>
       </ul>
-
       <!-- Social Media Links -->
       <div class="social-links">
         <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram">Instagram</a>
@@ -441,51 +406,40 @@ function main(event) {
       </div>
     </div>
   </section>
+  
 
 
-  <!-- Projects Section -->
-  <section id="projects" class="section bg-light">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Food WebApps</h3>
-          <p>A Food Website made in react</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Image Gallery</h3>
-          <p>A Image Gallery Website</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Job Portal</h3>
-          <p>A Job Portal Website made in plain html , css , javascript</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3>Programming Language</h3>
-        <p>A simple programming language</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-    </div>
-    </div>
-  </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn primary-btn">Send Message</button>
-      </form>
-    </div>
-  </section>
+<section id="contact" class="section bg-light">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch with me, feel free to send me a message through the form below.</p>
 
+    <form action="mailto:your-email@example.com" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2024 Your Name. All Rights Reserved.</p>
@@ -499,18 +453,15 @@ function main(event) {
   </footer>
 
   <script>
-    // Navbar toggle functionality for mobile
-    const navToggle = document.getElementById("navToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-
+    // Toggle Navbar on Mobile
+    function toggleNav() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
   </script>
 </body>
-
 </html>
+
   `, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8'
